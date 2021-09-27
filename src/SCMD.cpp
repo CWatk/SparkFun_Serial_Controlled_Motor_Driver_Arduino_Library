@@ -95,6 +95,11 @@ uint8_t SCMD::begin( void )
 		Wire.begin();
 		break;
 
+	case I2C_3V_MODE:
+	    Wire.begin();
+		// disable internal pullu resistors to be 3.3v compatible
+		digitalWrite(SDA,0);
+		digitalWrite(SCL,0);
 	case SPI_MODE:
 		// initalize the  data ready and chip select pins:
 		pinMode(settings.chipSelectPin, OUTPUT);

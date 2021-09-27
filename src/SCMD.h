@@ -28,6 +28,8 @@ Distributed as-is; no warranty is given.
 //  Setting options for commInterface
 #define I2C_MODE 0
 #define SPI_MODE 1
+// added 3.3v bus compatibility
+#define I2C_3V_MODE 2
 
 //  SCMDSettings
 //
